@@ -6,7 +6,7 @@ use tide::App;
 use std::{env, net::SocketAddr};
 
 fn main() {
-    let mut app = tide::App::new(());
+    let mut app = App::new(());
     let address = SocketAddr::from(([127, 0, 0, 1], get_server_port()));
 
     app.at("/").get(async move |_| "Hello, world!");
